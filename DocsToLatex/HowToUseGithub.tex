@@ -1,0 +1,102 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fancyhdr} % for headers and footers\usepackage{graphicx}\graphicspath{ {media/} }\pagenumbering{gobble} % Delete page number
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\date{}
+
+\begin{document}
+
+\pagestyle{fancy}  \fancyfoot[L]{\footnotesize This material is based upon work supported by the U.S. Department of Energy Office of Science, Advanced Scientific Computing Research and Biological and Environmental Research programs. \begin{flushright} \footnotesize Version 0.2, April 25, 2016 \end{flushright}}  \fancypagestyle{empty}{%
+  \renewcommand{\headrulewidth}{0pt}  \fancyhead[C]{\LARGE {How to Use Github}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}}  \fancyhead[R]{\includegraphics[width = 1.8 cm, height = 1.2 cm]{ideas}}	}\thispagestyle{empty}
+
+\textbf{\newline Overview:} This document describes best practices for using
+GitHub as a collaborative tool for developing scientific software.
+Because of the enthusiasm of the software development community for
+GitHub, there has been a lot of activity in this area, and we do not
+attempt to comprehensively catalog every approach here. Rather, we
+intend to draw attention to some workflows and rules of thumb to help
+scientific programmers to be more productive.
+
+\textbf{Target Audience:} Scientific software project leaders and
+developers.
+
+\textbf{Prerequisites:} First read the documents
+\href{https://docs.google.com/document/d/1LHT4e-BjB31BcCSL42xSI5GBNCNpQ-SS5K5iyStH6sw/edit}{\emph{What
+is version control?}},
+\href{https://docs.google.com/document/d/1mSrTdzZdLDz-YRquzABNhI87tGd_zP04ctyscmZ_Phw/edit}{\emph{How
+to do version control with Git}}, and
+\href{https://docs.google.com/document/d/1XoLBPwQ0lolYvEUsBpVcsVv3jUx6X9g4LL_x0xCsHsA/edit}{\emph{What
+is Github?}}
+
+\textbf{Resources:}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  \href{https://www.atlassian.com/git/tutorials/comparing-workflows}{\emph{Comparing
+  Git workflows}}
+  \end{quote}
+\item
+  \begin{quote}
+  \href{http://nvie.com/posts/a-successful-git-branching-model/}{\emph{A
+  successful Git branching model}}
+  \end{quote}
+\item
+  \begin{quote}
+  \href{https://help.github.com/}{\emph{GitHub's help site}}
+  \end{quote}
+\end{itemize}
+
+This document was prepared by Barry Smith and Jeffrey Johnson with key
+contributions from YYY.
+
+This material is based upon work supported by the U.S. Department of
+Energy Office of Science, Advanced Scientific Computing Research and
+Biological and Environmental Research programs.
+
+\end{document}

@@ -1,0 +1,260 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fancyhdr} % for headers and footers
+\usepackage{graphicx}
+\graphicspath{ {media/} }
+\pagenumbering{gobble} % Delete page number
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\date{}
+
+\begin{document}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[L]{\footnotesize This material is based upon work supported by the U.S. Department of Energy Office of Science, Advanced Scientific Computing Research and Biological and Environmental Research programs. \begin{flushright} \footnotesize Version 0.2, April 25, 2016 \end{flushright}}
+  
+\fancypagestyle{empty}{%
+\fancyhead[C]{\Large {What are Interoperable} \\ \Large {Software Libraries?}\\ \normalsize {Introducing the xSDK}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}}
+  \fancyhead[R]{\includegraphics[width = 2 cm, height = 3 cm]{ideas}}	
+}
+\thispagestyle{empty}
+
+\textbf{\newline \newline \newline Background:} As extreme-scale computational science increasingly
+incorporates multiscale and multiphysics modeling, simulation, and
+analysis, the combined use of software developed by independent groups
+has become imperative: no single team has resources for the full range
+of capabilities needed for predictive science and decision support.
+\textbf{Software libraries} have proven effective in providing widely
+reusable software that is robust, efficient, and scalable. Moreover,
+scientific application codes can employ library design principles to
+help manage complexity and achieve good performance, whether the
+application software is intended for use in a single context or modest
+reuse across applications in the same domain (e.g., as \textbf{domain
+components}). While the following discussion uses terminology of
+software library interoperability, the concepts also apply to
+application-specific domain components.
+
+\textbf{A software library} is a high-quality, encapsulated, documented,
+tested, and multiuse software collection that provides functionality
+commonly needed by application developers. Key advantages of software
+libraries include leverage of library developer expertise and reduced
+application coding effort. For example, numerical software libraries
+provide easy access to sophisticated mathematical algorithms and
+high-performance data structures that have been developed by experts, so
+that application users do not need to write this complex code and can
+instead focus on their scientific domain software.
+
+Libraries can provide control inversion via abstract interfaces,
+call-backs, or similar techniques such that user-defined functionality
+can be invoked by the library, for example, a user-defined sparse matrix
+multiplication routine. Libraries can also facilitate construction of
+related specific objects that provide customizable behavior to improve
+performance or flexibility. Moreover, libraries can include
+domain-specific software components that are designed to be used by more
+than one application.
+
+\textbf{Software library interoperability} refers to the ability of two
+or more libraries to be used together in an application code, without
+special effort on the part of the user. For simplicity, we discuss
+interoperability between two libraries; extension to interoperability
+among three or more libraries is conceptually straightforward. Depending
+on application needs, various levels of interoperability can be
+considered:
+
+\begin{itemize}
+\item
+  \begin{quote}
+  \textbf{Interoperability level 1:} both libraries can be used (side by
+  side) in an application
+  \end{quote}
+\item
+  \begin{quote}
+  \textbf{Interoperability level 2}: the libraries can exchange data (or
+  control data) with each other
+  \end{quote}
+\end{itemize}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  \textbf{Interoperability level 3}: each library can call the other
+  library to perform unique computations
+  \end{quote}
+\end{itemize}
+
+The simplest case (interoperability level 1) occurs when an application
+needs to call two distinct libraries for different functionalities (for
+example, an \href{http://www.mpi-forum.org}{\emph{MPI}} library for
+message-passing communication and
+\href{https://www.hdfgroup.org/HDF5/}{\emph{HDF5}} for data output). As
+discussed in
+{[}\href{https://figshare.com/articles/Package_Management_Practices_Essential_for_Interoperability_Lessons_Learned_and_Strategies_Developed_for_FASTMath/789055}{\emph{1}},
+\href{https://wci.llnl.gov/codes/smartlibs/UCRL-JRNL-208636.pdf}{\emph{2}}{]},
+even this basic level of interoperability requires consistency among
+libraries to be used within the same application, in terms of compiler,
+compiler version/options, and other third-party capabilities. If both
+libraries have a dependence on a common third party, the libraries must
+be able to use a single common instance of it. For example, more than
+one version of the popular SuperLU linear solver library exists, and
+interfaces have evolved. If two libraries both use SuperLU, they must be
+able to work with the same version of SuperLU. In practice, installing
+multiple independently developed packages together can be a tedious
+trial-and-error process.
+
+Interoperability level 2 builds on level 1 by enabling conversion, or
+encapsulation, and exchange of data between libraries. This level can
+simplify use of libraries in sequence by an application. In this case,
+the libraries themselves are typically used without internal
+modification to support the interoperability.
+
+Interoperability level 3 builds on level 2 by supporting the use of one
+library to provide functionality on behalf of another library. This
+level of interoperability provides significant value to application
+developers because they can access capabilities of additional libraries
+through the familiar interfaces of the first library.
+
+
+\textbf{The Extreme-Scale Scientific Software Development Kit (xSDK)}
+
+A key aspect of work in the
+\href{https://ideas-productivity.org/}{\emph{IDEAS project}} is
+development of the \href{http://xsdk.info}{\emph{Extreme-scale
+Scientific Software Development Kit (xSDK)}}\includegraphics[width=3cm,height=3cm]{xsdk} a collection of related 
+and complementary software elements that provide the building blocks,
+tools, models, processes, and related artifacts for rapid and efficient
+development of high-quality applications.
+
+\textbf{xSDK package compliance standards:} The xSDK addresses
+interoperability among the high-performance numerical libraries
+\href{https://computation.llnl.gov/project/linear_solvers/}{\emph{hypre}},
+\href{https://www.mcs.anl.gov/petsc/}{\emph{PETSc}},
+\href{http://crd.lbl.gov/~xiaoye/SuperLU/}{\emph{SuperLU}}, and
+\href{https://trilinos.org/}{\emph{Trilinos}}. The xSDK ensures level 1
+interoperability for each xSDK library via a full-featured build script
+and testing environment and a collection of compliance standards. The
+following draft xSDK standards address challenges in interoperability
+level 1.
+
+\begin{itemize}
+\item
+  \begin{quote}
+  \textbf{\href{https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit\#heading=h.3hcywq83w3x0}{\emph{xSDK
+  package compliance standards}}: \emph{A set of minimum requirements}}
+  (including topics of configuring, installing, testing, use of MPI,
+  portability, contact and version information, open source licensing,
+  namespacing, and repository access) that a software package must
+  satisfy in order to be considered xSDK compliant. The designation of
+  xSDK compliance informs potential users that the package can be easily
+  used with other xSDK libraries and components. Also presented are
+  \emph{\textbf{recommended standards}} (including topics of public
+  repository access, error handling, freeing system resources, and
+  library dependencies), which are encouraged but not required.
+  \end{quote}
+\item
+  \begin{quote}
+  \textbf{\href{https://docs.google.com/document/d/18028D6nsuhIrCvJnX6c07r8m_Np4SH-aGXMX4svMs1w/edit\#heading=h.3hcywq83w3x0}{\emph{xSDK
+  standard configure and CMake options}}: \emph{A standard subset of
+  configure and CMake options for xSDK and other HPC packages}} in order
+  to make the configuration and installation as efficient as possible on
+  standard Linux distributions and Mac OS, as well as on target machines
+  at DOE computing facilities
+  (\href{http://www.alcf.anl.gov/}{\emph{ALCF}},
+  \href{http://www.nersc.gov/}{\emph{NERSC}}, and
+  \href{https://www.olcf.ornl.gov/}{\emph{OLCF}}).
+  \end{quote}
+\end{itemize}
+
+The xSDK collection of software elements commits to compliance with
+these guidelines in order to ensure compatibility with other packages
+that meet the same standards. The aim is to simplify the combined use of
+multiple independently developed software packages and to provide a
+foundation for addressing broader issues in interoperability and
+performance portability.
+
+\textbf{Deeper levels of xSDK interoperability} involve exchanging,
+controlling, and interpreting data, as well as calling routines between
+libraries (interoperability levels 2 and 3 described above). Initial
+xSDK capabilities of hypre, PETSc, SuperLU, and Trilinos support
+interoperability among scalable linear solvers, so that applications can
+readily experiment with algorithms across multiple packages, in
+combination. Forthcoming companion documents will explain approaches
+used for interfaces and adapters between packages as well as work on
+interoperability layers for other functionalities. A longer-term goal is
+collaboration among members of the HPC community to improve software
+interoperability as needed by extreme-scale computational science.
+
+\subsection{References:}
+
+{\texorpdfstring{{[}\href{https://figshare.com/articles/Package_Management_Practices_Essential_for_Interoperability_Lessons_Learned_and_Strategies_Developed_for_FASTMath/789055}{\emph{1}}{]}
+Package Management Practices Essential for Interoperability: Lessons
+Learned and Strategies Developed for FASTMath, M. C. Miller, L. Diachin,
+S. Balay, L. C. McInnes, and B. Smith, First Workshop on Sustainable
+Software for Science: Practice and Experiences (WSSSPE), Nov 17,
+SC13.}{{[}1{]} Package Management Practices Essential for Interoperability: Lessons Learned and Strategies Developed for FASTMath, M. C. Miller, L. Diachin, S. Balay, L. C. McInnes, and B. Smith, First Workshop on Sustainable Software for Science: Practice and Experiences (WSSSPE), Nov 17, SC13.}}
+
+{\texorpdfstring{{[}\href{https://wci.llnl.gov/codes/smartlibs/UCRL-JRNL-208636.pdf}{\emph{2}}{]}
+Smart Libraries: Best SQE Practices for Libraries with Emphasis on
+Scientific Computing, M. C. Miller, J.F. Reus, R.P. Matzke, Q.A. Koziol,
+A.P. Cheng, Proceedings of the Nuclear Explosives Code Developer's
+Conference, Dec 2004.
+}{{[}2{]} Smart Libraries: Best SQE Practices for Libraries with Emphasis on Scientific Computing, M. C. Miller, J.F. Reus, R.P. Matzke, Q.A. Koziol, A.P. Cheng, Proceedings of the Nuclear Explosives Code Developer's Conference, Dec 2004. }}
+
+This document was prepared by Lois Curfman McInnes, Michael Heroux,
+Xiaoye Li, Barry Smith, and Ulrike Yang, with contributions from all
+xSDK developers.
+
+\end{document}
