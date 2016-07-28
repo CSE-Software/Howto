@@ -1,11 +1,16 @@
 \documentclass[]{article}
+% Added package start here
+\usepackage{array}
+\usepackage{geometry} % for margin of paper
+\geometry{margin=1.2in}
+\usepackage{fancyhdr} % for headers and footers
+\usepackage{graphicx} % for image
+\graphicspath{ {media/} }
+\pagenumbering{gobble} % Delete page number
+% End here
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fancyhdr} % for headers and footers
-\usepackage{graphicx}
-\graphicspath{ {media/} }
-\pagenumbering{gobble} % Delete page number
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -53,29 +58,35 @@
 \date{}
 
 \begin{document}
-
+% Added information start here
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
+% footer
   \fancyfoot[L]{\footnotesize This material is based upon work supported by the U.S. Department of Energy Office of Science, Advanced Scientific Computing Research and Biological and Environmental Research programs. \begin{flushright} \footnotesize Version 0.2, April 25, 2016 \end{flushright}}
   
-\fancypagestyle{empty}{%
-\fancyhead[C]{\Large {What is Performance Portability}\\ \Large {for CSE Applications?}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/ \newline}}}}
-  \fancyhead[R]{\includegraphics[width = 1.8 cm, height = 1.5 cm]{ideas}}	
+\fancypagestyle{empty}{
+% header
+\fancyhead[C]{\LARGE {What is Performance Portability}\\ \LARGE {for CSE Appilcations}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}} 
+  \fancyhead[R]{\includegraphics[width = 1.8 cm, height = 1.2 cm]{ideas}}	
 }
 \thispagestyle{empty}
+\textbf{\newline}
+\textbf{\newline}
+\textbf{\newline}
+% Added information ends here.
 
-\textbf{\newline \newline \newline Portability:} An application code is portable if it can run on a
+\textbf{Portability:} An application code is portable if it can run on a
 diverse set of platforms without needing significant modifications to
 the source and can produce predictably similar output.
 
-\textbf {Performance portability:} An application has portable
+\textbf{Performance portability}: An application has portable
 performance if in addition to running on diverse platforms it exhibits
 similar accuracy, stability, and reliability across these platforms for
 a given configuration. Moreover, the time to solution should reflect
 efficient utilization of available computational resources on each
 platform.
 
-\textbf{Performance components in CSE applications:} The performance
+\textbf{Performance components in CSE applications}: The performance
 of computational science and engineering (CSE) applications depends on
 the model, discretization, numerical algorithm, input data, and
 implementation. In roughly homogeneous platforms with similar basic
@@ -86,7 +97,7 @@ platform architecture, however, all the factors (the application model,
 its discretization, numerical algorithm, input set, and implementation)
 can impact performance portability.
 
-\textbf{Performance factors:} The performance of a code can be
+\textbf{Performance factors}: The performance of a code can be
 measured from many different perspectives. From the application science
 perspective these include (1) quality of solution, (2) stability of the
 code, and (3) time to solution. From the system perspective these
@@ -94,7 +105,6 @@ include (1) quality of machine utilization; (2) percentage of peak on
 the machine, measured in operations per second (e.g., FLOPS/s),
 bandwidth, or some other normalized value; and (3) throughput of the
 machine.
-
 
 \textbf{Constraints on performance:} Many CSE applications require
 flexibility and composability because they address different physical

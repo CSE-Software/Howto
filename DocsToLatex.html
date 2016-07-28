@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>From Google Docs To LaTeX</title>
+</head>
+
+<body>
+<header>
+    <div class="inner">
+        <h1>How To</h1>
+        <h2>Change Google Docs to Latex</h2>
+        <a href="https://github.com/CSE-Software/Howto" class="button"><small>View project on</small> GitHub</a>
+    </div>
+</header>
+
+<div id="content-wrapper">
+    <div class="inner clearfix" align="justify">
+        <section id="main-content">
+            <h4>Why changing from Docs To Latex?</h4>
+            <ol>
+            <li> Problem with Google Docs <br>
+            <a href="https://www.google.com/docs/about/">Google Docs</a> is an useful environment for people to create, upload,
+            download, edit, and share files. It has been used by many people, especially for team work, where all team members can
+            upload and edit files together. However, Google Docs has a big problem: if someone delete the file, it cannot be recovered.</li>
+            </ol>
+            <li>Solution <br>
+            To solve this problem, using a system similar to Google Docs but uploading the
+                <a href="https://en.wikipedia.org/wiki/LaTeX">Latex</a> files instead of Word file is
+            a reasonable solution. People can restore the previous version of the files. More over, Latex provides a better
+                view on the file, with the view only. Therefore, this document will serve to instruct people how to change
+                changing from Docs To Latex
+            </li>
+            <h4>Prerequisites</h4>
+            <ul>
+                <li>Background knowledge on <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">
+                    Python programming language</a>. If you not familiar with it, check out the tutorial
+                    <a href="http://www.tutorialspoint.com/python/">here</a>.</li>
+                <li>Background knowledge on <a href="https://www.latex-project.org/">
+                    LaTeX</a>. If you not familiar with it, check out the tutorial
+                    <a href="https://collegeville.github.io/Scribe/UsingLatex.html">here</a>.</li>
+                <li>Background knowledge on <a href="https://en.wikipedia.org/wiki/Pandoc">
+                    Pandoc</a>. If you not familiar with it, check out the tutorial and install Pandoc
+                    <a href="http://pandoc.org/">here</a>.</li>
+                <li>Background knowledge on <a href="https://en.wikipedia.org/wiki/Git_(software)">
+                    Git</a> and <a href="https://en.wikipedia.org/wiki/GitHub">GitHub</a>.
+                    If you not familiar with it, check out the tutorial
+                    <a href="https://www.udacity.com/course/how-to-use-git-and-github--ud775">here</a>.</li>
+            </ul>
+            <h4>Getting started</h4>
+            To covert Google Docs to Latex, do the following steps:
+            <ul>
+                <li>Download files from google docs as .docx</li>
+                <li>Download this <a href="data/template.tex">template file</a> and named it template.tex</li>
+                <li>Run this command in terminal: <br>
+                <em>pandoc <strong>inputFile</strong> –f docx –t latex –template <strong>template.tex</strong> –o
+                    <strong>outputFile</strong></em><br>
+                    with:                               <strong>inputFile</strong> is the name of input file as .docx <br>
+                    &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;    <strong>outputFile</strong>  is the name of output file as .docx <br>
+                <li>Modify the output file to get the best result.</li>
+                <li>Upload converted files to server.
+            </ul>
+            <h4>Review</h4>
+            <ul>
+                <li>The converting process works smoothly but remains some small problems ncluding table, images,
+                    header and footer, and some special characters because only one template cannot handle everything.</li>
+                <li>To achieve perfect result, some manual modifications need to implement
+                If you do not know how, see <a href="data/modification.pdf">full modifications</a>.</li>
+            </ul>
+            <h4>Collection of Latex conversion files</h4>
+            Click <a href="LatexCollection.html">here</a> to see full collection of latex files.
+            <h4>Contact</h4>
+            <ul>
+                <li>If you have any question about the above process,
+                    contact <a href="mailto:dhdo@csbsju">Duong Do</a> for explanation.</li>
+                <li>We also welcome for any recommendation for our project.
+                    Contact at the <a href="mailto:dhdo@csbsju">same address</a></li>
+            </ul>
+            <h4><a href="index.html">Back to homepage</a></h4>
+        </section>
+
+        <aside id="sidebar">
+            <a href="https://github.com/CSE-Software/Howto/zipball/master" class="button">
+                <small>Download</small>
+                .zip file
+            </a>
+            <a href="https://github.com/CSE-Software/Howto/tarball/master" class="button">
+                <small>Download</small>
+                .tar.gz file
+            </a>
+
+            <p class="repo-owner"><a href="https://github.com/Collegeville/Lex"></a> is maintained by <a href="https://github.com/Collegeville">Collegeville</a>.</p>
+
+        </aside>
+    </div>
+</div>
+
+
+</body>
+</html>

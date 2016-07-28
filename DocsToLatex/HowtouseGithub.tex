@@ -1,8 +1,16 @@
 \documentclass[]{article}
+% Added package start here
+\usepackage{array}
+\usepackage{geometry} % for margin of paper
+\geometry{margin=1.2in}
+\usepackage{fancyhdr} % for headers and footers
+\usepackage{graphicx} % for image
+\graphicspath{ {media/} }
+\pagenumbering{gobble} % Delete page number
+% End here
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fancyhdr} % for headers and footers\usepackage{graphicx}\graphicspath{ {media/} }\pagenumbering{gobble} % Delete page number
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -50,11 +58,24 @@
 \date{}
 
 \begin{document}
+% Added information start here
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+% footer
+  \fancyfoot[L]{\footnotesize This material is based upon work supported by the U.S. Department of Energy Office of Science, Advanced Scientific Computing Research and Biological and Environmental Research programs. \begin{flushright} \footnotesize Version 0.2, April 25, 2016 \end{flushright}}
+  
+\fancypagestyle{empty}{
+% header
+\fancyhead[C]{\LARGE {How to use Github}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}} 
+  \fancyhead[R]{\includegraphics[width = 1.8 cm, height = 1.2 cm]{ideas}}	
+}
+\thispagestyle{empty}
+\textbf{\newline}
+\textbf{\newline}
+\textbf{\newline}
+% Added information ends here.
 
-\pagestyle{fancy}  \fancyfoot[L]{\footnotesize This material is based upon work supported by the U.S. Department of Energy Office of Science, Advanced Scientific Computing Research and Biological and Environmental Research programs. \begin{flushright} \footnotesize Version 0.2, April 25, 2016 \end{flushright}}  \fancypagestyle{empty}{%
-  \renewcommand{\headrulewidth}{0pt}  \fancyhead[C]{\LARGE {How to Use Github}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}}  \fancyhead[R]{\includegraphics[width = 1.8 cm, height = 1.2 cm]{ideas}}	}\thispagestyle{empty}
-
-\textbf{\newline Overview:} This document describes best practices for using
+\textbf{Overview:} This document describes best practices for using
 GitHub as a collaborative tool for developing scientific software.
 Because of the enthusiasm of the software development community for
 GitHub, there has been a lot of activity in this area, and we do not

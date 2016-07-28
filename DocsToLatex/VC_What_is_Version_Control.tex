@@ -1,0 +1,246 @@
+\documentclass[]{article}
+% Added package start here
+\usepackage{array}
+\usepackage{geometry} % for margin of paper
+\geometry{margin=1.2in}
+\usepackage{fancyhdr} % for headers and footers
+\usepackage{graphicx} % for image
+\graphicspath{ {media/} }
+\pagenumbering{gobble} % Delete page number
+% End here
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\date{}
+
+\begin{document}
+% Added information start here
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+% footer
+  \fancyfoot[L]{\footnotesize This material is based upon work supported by the U.S. Department of Energy Office of Science, Advanced Scientific Computing Research and Biological and Environmental Research programs. \begin{flushright} \footnotesize Version 0.2, April 25, 2016 \end{flushright}}
+  
+\fancypagestyle{empty}{
+% header
+\fancyhead[C]{\LARGE {What is Version Control}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}} 
+  \fancyhead[R]{\includegraphics[width = 1.8 cm, height = 1.2 cm]{ideas}}	
+}
+\thispagestyle{empty}
+\textbf{\newline}
+\textbf{\newline}
+\textbf{\newline}
+% Added information ends here.
+
+\textbf{Motivation:} Software source, documentation, and other important
+(text) documents should be managed with a \textbf{Version Control System
+(VCS)} in order to do the following:
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Support safe incremental development (i.e., ``undos'')
+  \end{quote}
+\item
+  \begin{quote}
+  Support collaboration among different developers, contributors, and
+  customers
+  \end{quote}
+\item
+  \begin{quote}
+  Provide traceability from requirements to file changes
+  \end{quote}
+\item
+  \begin{quote}
+  Streamline development and testing processes
+  \end{quote}
+\item
+  \begin{quote}
+  Provide reproducibility of past results
+  \end{quote}
+\end{itemize}
+
+Users interact with a VCS through a formal process or \textbf{workflow}.
+In this document, we introduce some concepts and terminology of version
+control \protect\hyperlink{h.zeieakqm2nff}{\emph{{[}1{]}}}, mention some
+of its benefits, describe use cases where it has been helpful (even
+critical), and outline some of the major VCS tools
+\protect\hyperlink{h.f53m6pxt4rgc}{\emph{{[}2{]}}}.
+
+\textbf{Version Control Definitions and Terminology}
+
+Important terms and concepts in version control (see
+\protect\hyperlink{h.zeieakqm2nff}{\emph{{[}1{]}}}) include the
+following.
+
+\begin{itemize}
+\item
+  \begin{quote}
+  In a \textbf{Centralized VCS,} there is a single \textbf{repository},
+  and the user \textbf{workflow} consists of \emph{\textbf{checking
+  out}} stored versions, updating the checked-out copy, and
+  \emph{\textbf{checking in,} or \textbf{committing}} updated versions
+  to the central repository. \emph{Versions} of software are referred to
+  as \emph{\textbf{revisions}} or \emph{\textbf{commits}}. Users check
+  out a single version at a time, and only the central repository stores
+  all commits. If the central repository is lost without backups, the
+  repository's entire history will be lost. Most VCS tools allow
+  concurrent editing of the same files, requiring different versions to
+  be merged. This may result in \textbf{merge conflicts}, which must be
+  resolved manually before updating the central repository. (Note:
+  merging and resolving merge conflicts can be risky and time
+  consuming.)
+  \end{quote}
+\item
+  \begin{quote}
+  A \textbf{Distributed VCS} allows multiple complete copies of the same
+  repository, and changes are moved back and forth between different
+  repositories using various processes and workflows. Distributed VCS
+  enables workflows that are well suited for build \& test, code review,
+  collaboration, and concurrent \textbf{branches}.
+  \end{quote}
+\item
+  \begin{quote}
+  A \textbf{branch} is an ordered set of commits representing a single
+  history of changes to the files in a repository. Most systems support
+  the creation and merging of branches. Branches are an especially
+  important concept and tool in distributed VCS tools and processes.
+  \end{quote}
+\end{itemize}
+
+\textbf{Version Control Tools}
+
+Many high-quality open-source and commercial VCS are available
+\protect\hyperlink{h.f53m6pxt4rgc}{\emph{{[}2{]}}}. Some of the more
+popular free open-source version control tools are the following:
+
+\begin{itemize}
+\item
+  \begin{quote}
+  \textbf{Subversion (SVN)} is a popular centralized VCS started in
+  2000. The user interface is fairly simple and easy to learn. This is
+  largely due to the simplicity of the centralized VC workflow, but
+  branches are also supported.
+  \end{quote}
+\item
+  \begin{quote}
+  \textbf{Git} is a more recent distributed VCS started in 2005 to
+  support the development of the Linux kernel. In recent years Git has
+  become the most popular and dominant VCS in use, due to collaborative
+  workflows enabled by distributed VCS and made popular by the
+  \href{http://www.github.com}{\emph{GitHub}} code hosting site. Git has
+  a large and complex user interface, and it takes significant effort to
+  learn. Git is poorly suited for managing large binary data files (but
+  extensions like \href{https://git-lfs.github.com}{\emph{Git Large File
+  Storage (LFS)}} may help). Nevertheless, many large and complex
+  projects use Git in all sectors of software development (but often use
+  many smaller Git repositories rather than fewer large Git
+  repositories).
+  \end{quote}
+\item
+  \begin{quote}
+  \textbf{Mercurial} (hg), another distributed VCS, started around 2005.
+  It is less popular than Git but is generally considered to have a
+  simpler user interface. Mercurial is used by many projects (e.g., it
+  is the primary VCS tool for Facebook).
+  \end{quote}
+\item
+  \begin{quote}
+  \textbf{CVS} was the first popular, successful open-source VCS. It is
+  an older centralized VCS, and Subversion was created as its successor.
+  Although new projects no longer choose CVS, its influence and legacy
+  are important to note when considering VCS tools and workflows.
+  \end{quote}
+\end{itemize}
+
+Several tools exist to convert and interoperate between different
+open-source VCS (e.g.,
+\href{https://www.kernel.org/pub/software/scm/git/docs/v1.5.0/git-svn.html}{\emph{git-svn}},
+\href{https://www.mercurial-scm.org/wiki/HgGit}{\emph{hg-git}}).
+However, these tools vary greatly in maturity, performance, scalability,
+and usability.
+
+\textbf{Use Cases for Version Control}
+
+Version control is useful in numerous situations. Because most VCS tools
+are oriented to text file lines, users can manage and collaborate on
+nearly any set of text files in a VCS. The following are examples.
+
+\begin{itemize}
+\item
+  \begin{quote}
+  \textbf{Software development by a single individual:} Enables the
+  developer to keep track of older versions, support reproducibility of
+  past results, pursue incremental commits with undo, simplify automated
+  testing, help with porting, etc.
+  \end{quote}
+\item
+  \begin{quote}
+  \textbf{Software development by a team:} Aids in collaboration among
+  developers, supports code reviews, provides traceability of
+  requirements to code changes, etc.
+  \end{quote}
+\item
+  \begin{quote}
+  \textbf{Collaborative document writing:} For documents in plain text
+  source (e.g., Latex, reStructuredText, Markdown, HTML), allows
+  concurrent editing with merges (line by line), tracks who contributed
+  to what sections (e.g., using ``blame''), etc.
+  \end{quote}
+\end{itemize}
+
+\protect\hypertarget{h.9qg5mj337055}{}{}\textbf{References:}
+
+\protect\hypertarget{h.zeieakqm2nff}{}{\protect\hypertarget{id.hbymvf6o75jy}{}{}}{[}1{]}
+\href{https://en.wikipedia.org/wiki/Version_control}{\emph{https://en.wikipedia.org/wiki/Version\_control}}
+
+\protect\hypertarget{h.f53m6pxt4rgc}{}{\protect\hypertarget{id.701ggrsblayp}{}{}}{[}2{]}
+\href{https://en.wikipedia.org/wiki/List_of_version_control_software}{\emph{https://en.wikipedia.org/wiki/List\_of\_version\_control\_software}}
+
+This document was prepared by Roscoe A. Bartlett with key contributions
+from Jim Willenbring and Todd Gamblin.
+
+\end{document}

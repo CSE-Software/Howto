@@ -1,11 +1,16 @@
 \documentclass[]{article}
+% Added package start here
+\usepackage{array}
+\usepackage{geometry} % for margin of paper
+\geometry{margin=1.2in}
+\usepackage{fancyhdr} % for headers and footers
+\usepackage{graphicx} % for image
+\graphicspath{ {media/} }
+\pagenumbering{gobble} % Delete page number
+% End here
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fancyhdr} % for headers and footers
-\usepackage{graphicx}
-\graphicspath{ {media/} }
-\pagenumbering{gobble} % Delete page number
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -53,21 +58,26 @@
 \date{}
 
 \begin{document}
-
+% Added information start here
 \pagestyle{fancy}
-  \renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0pt}
+% footer
   \fancyfoot[L]{\footnotesize This material is based upon work supported by the U.S. Department of Energy Office of Science, Advanced Scientific Computing Research and Biological and Environmental Research programs. \begin{flushright} \footnotesize Version 0.2, April 25, 2016 \end{flushright}}
   
-\fancypagestyle{empty}{%
-  \fancyhead[C]{\LARGE {What Is Good Documentation}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}}
+\fancypagestyle{empty}{
+% header
+\fancyhead[C]{\LARGE {What is  Good Documentation}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}} 
   \fancyhead[R]{\includegraphics[width = 1.8 cm, height = 1.2 cm]{ideas}}	
 }
-
 \thispagestyle{empty}
+\textbf{\newline}
+\textbf{\newline}
+\textbf{\newline}
+% Added information ends here.
 
-\textbf{\newline Motivation}: Software
+\subsubsection{\texorpdfstring{\textbf{Motivation}: Software
 documentation is essential for three
-reasons:
+reasons:}{Motivation: Software documentation is essential for three reasons:}}\label{motivation-software-documentation-is-essential-for-three-reasons}
 
 \begin{enumerate}
 \def\labelenumi{(\arabic{enumi})}
@@ -95,7 +105,7 @@ of producing spurious scientific results is minimized.
 software world a good place to start for a general description of
 documentation practices is {[}1{]}. For scientific software many
 categories for documentation are listed
-below.
+below.{Categories: In the wider software world a good place to start for a general description of documentation practices is {[}1{]}. For scientific software many categories for documentation are listed below.}
 
 \begin{itemize}
 \item

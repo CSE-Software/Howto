@@ -1,11 +1,16 @@
 \documentclass[]{article}
+% Added package start here
+\usepackage{array}
+\usepackage{geometry} % for margin of paper
+\geometry{margin=1.2in}
+\usepackage{fancyhdr} % for headers and footers
+\usepackage{graphicx} % for image
+\graphicspath{ {media/} }
+\pagenumbering{gobble} % Delete page number
+% End here
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fancyhdr} % for headers and footers
-\usepackage{graphicx}
-\graphicspath{ {media/} }
-\pagenumbering{gobble}
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -53,19 +58,24 @@
 \date{}
 
 \begin{document}
-
+% Added information start here
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
+% footer
   \fancyfoot[L]{\footnotesize This material is based upon work supported by the U.S. Department of Energy Office of Science, Advanced Scientific Computing Research and Biological and Environmental Research programs. \begin{flushright} \footnotesize Version 0.2, April 25, 2016 \end{flushright}}
   
-\fancypagestyle{empty}{%
-  \fancyhead[C]{\LARGE {What is Software Configuration}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}}
+\fancypagestyle{empty}{
+% header
+\fancyhead[C]{\LARGE {What is Software Configuration}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}} 
   \fancyhead[R]{\includegraphics[width = 1.8 cm, height = 1.2 cm]{ideas}}	
 }
-
 \thispagestyle{empty}
+\textbf{\newline}
+\textbf{\newline}
+\textbf{\newline}
+% Added information ends here.
 
-\textbf{\newline Motivation:} Installing scientific libraries or applications
+\textbf{Motivation:} Installing scientific libraries or applications
 from source requires a system for setting up (configuring) the package
 to compile and link the code according to the user's specific platform
 and needs. This document introduces three of the most common approaches
@@ -144,12 +154,11 @@ system. The installer enters the following.
 
 \begin{quote}
 ./configure {[}-\/-prefix{]} {[}options{]}
-\end{quote}
 
 make
 
 make install
-
+\end{quote}
 GNU Autotools includes Autoconf for generating the configure script and
 Automake and Libtool used by the package developer to simplify providing
 makefiles and building libraries for the package.
@@ -160,12 +169,11 @@ mathematical libraries. The installer enters the following.
 
 \begin{quote}
 ./cmake {[}options{]}
-\end{quote}
 
 make
 
 make install
-
+\end{quote}
 One CMake feature (which GNU Autotools does not have) is that it can
 generate all the data files needed for IDE systems such as
 \href{http://eclipse}{\emph{Eclipse}} and Microsoft

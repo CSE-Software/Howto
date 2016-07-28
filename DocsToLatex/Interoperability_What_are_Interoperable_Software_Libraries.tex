@@ -1,11 +1,16 @@
 \documentclass[]{article}
+% Added package start here
+\usepackage{array}
+\usepackage{geometry} % for margin of paper
+\geometry{margin=1.2in, bottom=1.5in}
+\usepackage{fancyhdr} % for headers and footers
+\usepackage{graphicx} % for image
+\graphicspath{ {media/} }
+\pagenumbering{gobble} % Delete page number
+% End here
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fancyhdr} % for headers and footers
-\usepackage{graphicx}
-\graphicspath{ {media/} }
-\pagenumbering{gobble} % Delete page number
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -62,18 +67,24 @@
 \date{}
 
 \begin{document}
-
+% Added information start here
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
+% footer
   \fancyfoot[L]{\footnotesize This material is based upon work supported by the U.S. Department of Energy Office of Science, Advanced Scientific Computing Research and Biological and Environmental Research programs. \begin{flushright} \footnotesize Version 0.2, April 25, 2016 \end{flushright}}
   
-\fancypagestyle{empty}{%
-\fancyhead[C]{\Large {What are Interoperable} \\ \Large {Software Libraries?}\\ \normalsize {Introducing the xSDK}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}}
-  \fancyhead[R]{\includegraphics[width = 2 cm, height = 3 cm]{ideas}}	
+\fancypagestyle{empty}{
+% header
+\fancyhead[C]{\LARGE {What Are Interoperable Software Libraries}\\ \large{Introducing the xSDK}\\ \normalsize {The IDEAS Scientific Software Productivity Project} \\ \small {\href{https://ideas-productivity.org/resources/howtos/}{\emph{ideas-productivity.org/resources/howtos/}}}} 
+  \fancyhead[R]{\includegraphics[width = 1.8 cm, height = 1.2 cm]{ideas}}	
 }
 \thispagestyle{empty}
+\textbf{\newline}
+\textbf{\newline}
+\textbf{\newline}
+% Added information ends here.
 
-\textbf{\newline \newline \newline Background:} As extreme-scale computational science increasingly
+\textbf{Background:} As extreme-scale computational science increasingly
 incorporates multiscale and multiphysics modeling, simulation, and
 analysis, the combined use of software developed by independent groups
 has become imperative: no single team has resources for the full range
@@ -167,16 +178,21 @@ level of interoperability provides significant value to application
 developers because they can access capabilities of additional libraries
 through the familiar interfaces of the first library.
 
+%\includegraphics[width=1.29550in,height=1.01354in]{media/image01.png}
+\begin{minipage}{0.75\textwidth}
 
 \textbf{The Extreme-Scale Scientific Software Development Kit (xSDK)}
-
 A key aspect of work in the
 \href{https://ideas-productivity.org/}{\emph{IDEAS project}} is
 development of the \href{http://xsdk.info}{\emph{Extreme-scale
-Scientific Software Development Kit (xSDK)}}\includegraphics[width=3cm,height=3cm]{xsdk} a collection of related 
+Scientific Software Development Kit (xSDK)}}---a collection of related
 and complementary software elements that provide the building blocks,
 tools, models, processes, and related artifacts for rapid and efficient
 development of high-quality applications.
+\end{minipage}
+\begin{minipage}{0.3\textwidth}\raggedleft
+\includegraphics[width=0.8\textwidth]{xsdk}\raggedleft
+\end{minipage}
 
 \textbf{xSDK package compliance standards:} The xSDK addresses
 interoperability among the high-performance numerical libraries
@@ -235,23 +251,22 @@ combination. Forthcoming companion documents will explain approaches
 used for interfaces and adapters between packages as well as work on
 interoperability layers for other functionalities. A longer-term goal is
 collaboration among members of the HPC community to improve software
-interoperability as needed by extreme-scale computational science.
+interoperability as needed by extreme-scale computational science.\pagebreak 
 
-\subsection{References:}
+\textbf{References:}
 
-{\texorpdfstring{{[}\href{https://figshare.com/articles/Package_Management_Practices_Essential_for_Interoperability_Lessons_Learned_and_Strategies_Developed_for_FASTMath/789055}{\emph{1}}{]}
+{[}\href{https://figshare.com/articles/Package_Management_Practices_Essential_for_Interoperability_Lessons_Learned_and_Strategies_Developed_for_FASTMath/789055}{\emph{1}}{]}
 Package Management Practices Essential for Interoperability: Lessons
 Learned and Strategies Developed for FASTMath, M. C. Miller, L. Diachin,
 S. Balay, L. C. McInnes, and B. Smith, First Workshop on Sustainable
 Software for Science: Practice and Experiences (WSSSPE), Nov 17,
-SC13.}{{[}1{]} Package Management Practices Essential for Interoperability: Lessons Learned and Strategies Developed for FASTMath, M. C. Miller, L. Diachin, S. Balay, L. C. McInnes, and B. Smith, First Workshop on Sustainable Software for Science: Practice and Experiences (WSSSPE), Nov 17, SC13.}}
+SC13.
 
-{\texorpdfstring{{[}\href{https://wci.llnl.gov/codes/smartlibs/UCRL-JRNL-208636.pdf}{\emph{2}}{]}
+{[}\href{https://wci.llnl.gov/codes/smartlibs/UCRL-JRNL-208636.pdf}{\emph{2}}{]}
 Smart Libraries: Best SQE Practices for Libraries with Emphasis on
 Scientific Computing, M. C. Miller, J.F. Reus, R.P. Matzke, Q.A. Koziol,
 A.P. Cheng, Proceedings of the Nuclear Explosives Code Developer's
 Conference, Dec 2004.
-}{{[}2{]} Smart Libraries: Best SQE Practices for Libraries with Emphasis on Scientific Computing, M. C. Miller, J.F. Reus, R.P. Matzke, Q.A. Koziol, A.P. Cheng, Proceedings of the Nuclear Explosives Code Developer's Conference, Dec 2004. }}
 
 This document was prepared by Lois Curfman McInnes, Michael Heroux,
 Xiaoye Li, Barry Smith, and Ulrike Yang, with contributions from all
