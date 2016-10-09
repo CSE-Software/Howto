@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b632644-17d9-4aad-ba49-f0b52e449698" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DocsToLatex/media/ideas.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/ConfigurationHowToConfigureSoftware.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/ConfigurationHowToConfigureSoftware.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/ConfigurationWhatIsSoftwareConfiguration.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/ConfigurationWhatIsSoftwareConfiguration.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/DocumentationWhatisgooddocumentation.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/DocumentationWhatisgooddocumentation.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/HowToUseGithub.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/HowToUseGithub.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/How_to_write_good_documentation.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/How_to_write_good_documentation.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Interoperability_What_are_Interoperable_Software_Libraries.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/Interoperability_What_are_Interoperable_Software_Libraries.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Performance_IDEAS_HowTo_Enable_Performance_Portability.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/Performance_IDEAS_HowTo_Enable_Performance_Portability.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Performance_IDEAS_WhatIs_Performance_Portability.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/Performance_IDEAS_WhatIs_Performance_Portability.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Productivity_How_to_Improve_CSE_SW_Productivity.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/Productivity_How_to_Improve_CSE_SW_Productivity.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Productivity_What_is_CSE_SW_Productivity.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/Productivity_What_is_CSE_SW_Productivity.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Testing_Definition_and_Categorization_of_Tests_for_CSE_Software.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/Testing_Definition_and_Categorization_of_Tests_for_CSE_Software.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Testing_How_to_Add_Improve_Testing_in_your_CSE_Software_Project.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/Testing_How_to_Add_Improve_Testing_in_your_CSE_Software_Project.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Testing_What_Are_Software_Testing_Practices.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/Testing_What_Are_Software_Testing_Practices.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/VC_How_To_Do_Version_Control_with_Git.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/VC_How_To_Do_Version_Control_with_Git.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/VC_What_is_Version_Control.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/VC_What_is_Version_Control.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/What_is_Github.pdf" afterPath="$PROJECT_DIR$/DocsToLatex/What_is_Github.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/ConfigurationHowToConfigureSoftware.tex" afterPath="$PROJECT_DIR$/DocsToLatex/ConfigurationHowToConfigureSoftware.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/ConfigurationWhatIsSoftwareConfiguration.tex" afterPath="$PROJECT_DIR$/DocsToLatex/ConfigurationWhatIsSoftwareConfiguration.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/DocumentationWhatisgooddocumentation.tex" afterPath="$PROJECT_DIR$/DocsToLatex/DocumentationWhatisgooddocumentation.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/How_to_write_good_documentation.tex" afterPath="$PROJECT_DIR$/DocsToLatex/How_to_write_good_documentation.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/HowtouseGithub.tex" afterPath="$PROJECT_DIR$/DocsToLatex/HowtouseGithub.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Interoperability_What_are_Interoperable_Software_Libraries.tex" afterPath="$PROJECT_DIR$/DocsToLatex/Interoperability_What_are_Interoperable_Software_Libraries.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Performance_IDEAS_HowTo_Enable_Performance_Portability.tex" afterPath="$PROJECT_DIR$/DocsToLatex/Performance_IDEAS_HowTo_Enable_Performance_Portability.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Performance_IDEAS_WhatIs_Performance_Portability.tex" afterPath="$PROJECT_DIR$/DocsToLatex/Performance_IDEAS_WhatIs_Performance_Portability.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Productivity_How_to_Improve_CSE_SW_Productivity.tex" afterPath="$PROJECT_DIR$/DocsToLatex/Productivity_How_to_Improve_CSE_SW_Productivity.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Productivity_What_is_CSE_SW_Productivity.tex" afterPath="$PROJECT_DIR$/DocsToLatex/Productivity_What_is_CSE_SW_Productivity.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Testing_Definition_and_Categorization_of_Tests_for_CSE_Software.tex" afterPath="$PROJECT_DIR$/DocsToLatex/Testing_Definition_and_Categorization_of_Tests_for_CSE_Software.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Testing_How_to_Add_Improve_Testing_in_your_CSE_Software_Project.tex" afterPath="$PROJECT_DIR$/DocsToLatex/Testing_How_to_Add_Improve_Testing_in_your_CSE_Software_Project.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/Testing_What_Are_Software_Testing_Practices.tex" afterPath="$PROJECT_DIR$/DocsToLatex/Testing_What_Are_Software_Testing_Practices.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/VC_How_To_Do_Version_Control_with_Git.tex" afterPath="$PROJECT_DIR$/DocsToLatex/VC_How_To_Do_Version_Control_with_Git.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/VC_What_is_Version_Control.tex" afterPath="$PROJECT_DIR$/DocsToLatex/VC_What_is_Version_Control.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex/What_is_Github.tex" afterPath="$PROJECT_DIR$/DocsToLatex/What_is_Github.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LatexCollection.html" afterPath="$PROJECT_DIR$/LatexCollection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DocsToLatex.html" afterPath="$PROJECT_DIR$/DocsToLatex.html" />
     </list>
     <ignored path="Howto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,7 +28,27 @@
         <entry file="file://$PROJECT_DIR$/DocsToLatex.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="35" column="143" selection-start-line="35" selection-start-column="143" selection-end-line="35" selection-end-column="143" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntroductionToJekyll.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IntroductionToJekyll.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResearchingWebpage.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ResearchingWebpage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6691176">
+              <caret line="60" column="76" selection-start-line="60" selection-start-column="76" selection-end-line="60" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -70,18 +57,28 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.875">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LatexCollection.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LatexCollection.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LatexCollection.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65384614">
+            <state vertical-scroll-proportion="0.0">
               <caret line="125" column="134" selection-start-line="125" selection-start-column="134" selection-end-line="125" selection-end-column="134" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doc_to_latex.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/doc_to_latex.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,7 +91,7 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.12893982">
+              <first_editor vertical-scroll-proportion="0.0">
                 <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
                 <folding />
               </first_editor>
@@ -115,10 +112,11 @@
         <option value="$PROJECT_DIR$/ConfigurationHowToConfigureSoftware.tex" />
         <option value="$PROJECT_DIR$/copyfile.py" />
         <option value="$PROJECT_DIR$/IntroductionToJekyll.html" />
-        <option value="$PROJECT_DIR$/DocsToLatex.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/LatexCollection.html" />
+        <option value="$PROJECT_DIR$/DocsToLatex.html" />
+        <option value="$PROJECT_DIR$/ResearchingWebpage.html" />
       </list>
     </option>
   </component>
@@ -152,8 +150,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -172,12 +168,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Howto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Howto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Howto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Howto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Howto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Howto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cards-jekyll-template" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -185,8 +225,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
   <component name="RunManager">
@@ -335,18 +375,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41611624" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21059602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -390,12 +430,44 @@
     <entry file="file://$PROJECT_DIR$/DocsToLatex.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="143" selection-start-line="35" selection-start-column="143" selection-end-line="35" selection-end-column="143" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IntroductionToJekyll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResearchingWebpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LatexCollection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="125" column="134" selection-start-line="125" selection-start-column="134" selection-end-line="125" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/doc_to_latex.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -411,6 +483,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LatexCollection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="125" column="134" selection-start-line="125" selection-start-column="134" selection-end-line="125" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DocsToLatex.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -421,7 +509,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.875">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LatexCollection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="125" column="134" selection-start-line="125" selection-start-column="134" selection-end-line="125" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/doc_to_latex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocsToLatex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LatexCollection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -433,7 +561,7 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.12893982">
+          <first_editor vertical-scroll-proportion="0.0">
             <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
             <folding />
           </first_editor>
@@ -441,11 +569,150 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DocsToLatex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LatexCollection.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65384614">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.0">
+            <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocsToLatex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocsToLatex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocsToLatex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LatexCollection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="125" column="134" selection-start-line="125" selection-start-column="134" selection-end-line="125" selection-end-column="134" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/doc_to_latex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocsToLatex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="143" selection-start-line="35" selection-start-column="143" selection-end-line="35" selection-end-column="143" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IntroductionToJekyll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResearchingWebpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6691176">
+          <caret line="60" column="76" selection-start-line="60" selection-start-column="76" selection-end-line="60" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.0">
+            <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
