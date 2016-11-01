@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Contribute to Software Carpentry</title>
+</head>
+
+<body>
+<header>
+    <div class="inner">
+        <h1>How To</h1>
+        <h2>Contribute to Software Carpentry</h2>
+        <a href="https://github.com/CSE-Software/Howto" class="button"><small>View project on</small> GitHub</a>
+    </div>
+</header>
+
+<div id="content-wrapper">
+    <div class="inner clearfix" align="justify">
+        <section id="main-content">
+            <h4>Overview</h4>
+            This is the tutorial for who want to contribute for Software Carpentry website.
+            This tutorial only contain basic instructions with some specific steps.
+            Other questions or issues contact <a href="mailto:dhdo@csbsju.edu">Duong Do</a>
+            <h4>Prerequisites</h4>
+            Basic understanding on
+            <a href="https://cse-software.github.io/Howto/IntroductionToJekyll.html">Jekyll</a>.
+            <h4>Steps</h4>
+            <ol>
+                <li>Create normal HTML files, but do not include "html", "title", "head", and "body" tag</li>
+                <li>Type these following at the beginning of the file: <br>
+                    --- <br>
+                    layout: page-fullwidth <br>
+                    permalink: /Name of HTML file (without .html)/ <br>
+                    title: Your title <br>
+                    --- <br>
+                </li>
+                <li>Put your files into the <strong>pages</strong> folder</li>
+                <li>Come to <strong>data/navigation.yml</strong> and add the correspond links for the files</li>
+            </ol>
+
+            <h4><a href="index.html">Back to homepage</a></h4>
+        </section>
+
+        <aside id="sidebar">
+            <a href="https://github.com/CSE-Software/Howto/zipball/master" class="button">
+                <small>Download</small>
+                .zip file
+            </a>
+            <a href="https://github.com/CSE-Software/Howto/tarball/master" class="button">
+                <small>Download</small>
+                .tar.gz file
+            </a>
+
+            <p class="repo-owner"><a href="https://github.com/Collegeville/Lex"></a> is maintained by <a href="https://github.com/Collegeville">Collegeville</a>.</p>
+
+        </aside>
+    </div>
+</div>
+
+
+</body>
+</html>
