@@ -13,14 +13,14 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Trilinos Maintenance</title>
+    <title>Mantevo Maintenance</title>
 </head>
 
 <body>
 <header>
     <div class="inner">
         <h1>How To</h1>
-        <h2>Update trilinos.github.io</h2>
+        <h2>Update mantevo.github.io</h2>
         <a href="https://github.com/CSE-Software/Howto" class="button"><small>View project on</small> GitHub</a>
     </div>
 </header>
@@ -58,8 +58,6 @@
                 <li><strong>_config.yml:</strong>
                     <ol>
                         <li>Update title, company name, feeback email, etc. as the comment shows</li>
-                        <li>Release new version: Add new version to <em>trilinos_versions list</em> at the end of _config file.
-                            All the doxygen pages will be auto update to the new version.</li>
                     </ol>
                 </li>
                 <li><strong>README.md</strong>: basic information about the web page</li>
@@ -69,22 +67,11 @@
             <h3>Using metadata</h3>
             In each markdown file, there is some meta data information at the top of the file, which should be updated if needed.<br>
 
-            Normal files example:
+            Normal file example:
             <ul>
-                <li>title: Events</li>
-                <li>permalink: events.html</li>
+                <li>title: Developer Tools</li>
+                <li>permalink: developer_tools.html</li>
                 <li>folder: community</li>
-            </ul>
-
-            Package files example:
-            <ul>
-                <li>title: Amesos</li>
-                <li>permalink: amesos.html</li>
-                <li>folder: packages</li>
-                <li>show_sidebar: true</li>
-                <li>contact: amesos-developers@software.sandia.gov</li>
-                <li>package: amesos</li>
-                <li>doxygen: true</li>
             </ul>
 
             <h3>Test locally</h3>
