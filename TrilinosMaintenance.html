@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Trilinos Maintenance</title>
+</head>
+
+<body>
+<header>
+    <div class="inner">
+        <h1>How To</h1>
+        <h2>Update trilinos.github.io</h2>
+        <a href="https://github.com/CSE-Software/Howto" class="button"><small>View project on</small> GitHub</a>
+    </div>
+</header>
+
+<div id="content-wrapper">
+    <div class="inner clearfix" align="justify">
+        <section id="main-content">
+            <h3>Important directories</h3>
+            <ul>
+                <li><strong>_data:</strong>
+                    <ol>
+                        <li>topnav.yml: contains all data for the website top navigation</li>
+                    </ol>
+                </li>
+                <li><strong>_include:</strong>
+                    <ol>
+                        <li>google_analytics.html: set up for google analytics</li>
+                        <li>footer.html: set up footer for all pages</li>
+                        <li>header.html: set up header for all pages</li>
+                        <li>sidebar.html: set up sidebar (if needed)</li>
+                    </ol>
+                </li>
+                <li><strong>_layout:</strong>
+                    <ol>
+                        <li>default.html: base layout for the website</li>
+                        <li>page.html: layouts for all pages</li>
+                    </ol>
+                </li>
+                <li><strong>css, js:</strong> Contains font, css, and images for the web page.
+                    Updates should be implemented only on <em>customstyles.css</em> and <em>customscripts.js</em></li><br>
+                <li><strong>_pages</strong>: contains main content for the website. All files are written in markdown and easy to update.</li>
+            </ul>
+            <h3>Important files</h3>
+            <ul>
+                <li><strong>_config.yml:</strong>
+                    <ol>
+                        <li>Update title, company name, feeback email, etc. as the comment shows</li>
+                        <li>Release new version: Add new version to <em>trilinos_versions list</em> at the end of _config file.
+                            All the doxygen pages will be auto update to the new version.</li>
+                    </ol>
+                </li>
+                <li><strong>README</strong>: basic information about the web page</li>
+            </ul>
+            The other folders and files are often trivial; therefore, we do not need to research them.
+
+            <h3>Using metadata</h3>
+            In each markdown file, there is some meta data information at the top of the file, which should be updated if needed.<br>
+
+            Normale file example:
+            <ul>
+                <li>title: Events</li>
+                <li>permalink: events.html</li>
+                <li>folder: community</li>
+            </ul>
+
+            Package file example:
+            <ul>
+                <li>title: Amesos</li>
+                <li>permalink: amesos.html</li>
+                <li>folder: packages</li>
+                <li>show_sidebar: true</li>
+                <li>contact: amesos-developers@software.sandia.gov</li>
+                <li>package: amesos</li>
+                <li>doxygen: true</li>
+            </ul>
+
+            <h3>Test locally</h3>
+            Run <em>bundle exec jekyll serve</em> to test web page locally before commit and push to GitHub repo.
+            <br>
+            <h4><a href="index.html">Back to homepage</a></h4>
+        </section>
+
+        <aside id="sidebar">
+            <a href="https://github.com/CSE-Software/Howto/zipball/master" class="button">
+                <small>Download</small>
+                .zip file
+            </a>
+            <a href="https://github.com/CSE-Software/Howto/tarball/master" class="button">
+                <small>Download</small>
+                .tar.gz file
+            </a>
+
+            <p class="repo-owner"><a href="https://github.com/Collegeville/Lex"></a> is maintained by <a href="https://github.com/Collegeville">Collegeville</a>.</p>
+
+        </aside>
+    </div>
+</div>
+
+
+</body>
+</html>
