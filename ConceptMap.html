@@ -28,7 +28,49 @@
 <div id="content-wrapper">
     <div class="inner clearfix" align="justify">
         <section id="main-content">
-            <h4>Contact</h4>
+            Below are some tutorials on creating concept map by Doxygen. This tutorial can apply to
+            <a href="https://duongdo27.github.io/TrilinosConceptMap">Trilinos Concept Map</a> and
+            <a href="https://duongdo27.github.io/Dealii/html/index.html">Better Scientific Concept Map</a>.
+            <h3>Required repos and files</h3>
+                There are two required files <strong>index.html</strong> and <strong>readme.md</strong>.
+                All the contents will be located in markdown folder. It often contains
+                <em>.md</em> file and <em>.dot</em> file. Download two example files:
+                <a href="data/categories.md">categories.md</a> and <a href="data/categories.dot">categories.dot</a>
+
+            <h3>Generating files on Doxygen</h3>
+            <ul>
+                <li><a href="http://www.stack.nl/~dimitri/doxygen/download.html">Download Doxygen</a> and open it.</li>
+                <li>Choose appropriate project title and directories.
+                    Source code directory will be the markdown folder and destination directory will be the main directory.
+                    Then click Next. <br>
+                    <img src="data/1.png" alt="Mountain View">
+                </li>
+                <br>
+                <li>Choose mode as the image below. Click Next.<br><br>
+                    <img src="data/2.png" alt="Mountain View">
+                </li>
+                <br>
+                <li>Choose output as the image below. Click Next.<br><br>
+                    <img src="data/3.png" alt="Mountain View">
+                </li>
+                <br>
+                <li>Choose diagram as the image below. Click Expert.<br><br>
+                    <img src="data/4.png" alt="Mountain View">
+                </li>
+                <br>
+                <li>Click on Dot in the left navigation bar and choose Dot File directories is the markdown folder.<br><br>
+                    <img src="data/5.png" alt="Mountain View">
+                </li>
+                <br>
+                <li>Cilck Run, then click Run doxygen.<br><br>
+                    <img src="data/6.png" alt="Mountain View">
+                </li>
+                <br>
+                <li>Click on Show HTML output to check result locally.</li>
+                <li>If the result is not correct, check the content inside <strong>markdown</strong> folder and rerun the above steps.</strong></li>
+            </ul>
+
+            <h3>Contact</h3>
             <ul>
                 <li>If you have any question about the above process,
                     contact <a href="mailto:dhdo@csbsju">Duong Do</a> for explanation.</li>
