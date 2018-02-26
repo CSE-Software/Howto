@@ -28,7 +28,46 @@
 <div id="content-wrapper">
     <div class="inner clearfix" align="justify">
         <section id="main-content">
-            <h4>Contact</h4>
+            Idea: Using Google API Console to collect information from Google Form
+            <h3>Step:</h3>
+            <ol>
+                <li>
+                    Using <a href="https://console.developers.google.com/apis">Google API Console</a>
+                    to generate <em>.json file</em> with private key and ID
+                </li>
+                <li>
+                    Research on <a href="https://github.com/burnash/gspread">Google Spreadsheets Python API</a>
+                </li>
+                <li>
+                    Get credentials from Google
+                    <xmp>
+                        with open('google_key.json') as f:
+                            config = json.load(f)
+
+                        creds = SignedJwtAssertionCredentials(
+                            config['client_email'],
+                            config['private_key'],
+                            ['https://spreadsheets.google.com/feeds']
+                        )
+                        return gspread.authorize(creds)
+                    </xmp>
+                </li>
+                <li>
+                    Get the information from Google Form and process it
+                    <xmp>
+                        gc = get_google_client()
+                        doc = gc.open_by_key({{ fill in the Google Sheet ID }})
+                        sheet = doc.worksheet({{ fill in the Google Sheet Tab }})
+                        row_count = sheet.row_count
+                        for row in range(2, row_count + 1):
+                            values = sheet.row_values(row)
+                            if not values[0]:
+                                break
+                            process_value(values)
+                    </xmp>
+                </li>
+            </ol>
+            <h3>Contact</h3>
             <ul>
                 <li>If you have any question about the above process,
                     contact <a href="mailto:dhdo@csbsju">Duong Do</a> for explanation.</li>
