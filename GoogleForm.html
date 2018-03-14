@@ -13,7 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>From Google Docs To LaTeX</title>
+    <title>Google Form</title>
 </head>
 
 <body>
@@ -38,8 +38,16 @@
                 <li>
                     Research on <a href="https://github.com/burnash/gspread">Google Spreadsheets Python API</a>
                 </li>
+                <li>Open the <em>.json file</em> to see all the necessary information.
+                    Share Google spread sheet with client email in the <em>.json file</em>.
+                </li>
+
+                <li>Write a script to process the data collected.</li>
+            </ol>
+            <ol>
+                There are 3 necessary parts on the script.
                 <li>
-                    Get credentials from Google
+                    Get credentials from Google by open <em>.json file</em>
                     <xmp>
                         with open('google_key.json') as f:
                             config = json.load(f)
@@ -66,7 +74,14 @@
                             process_value(values)
                     </xmp>
                 </li>
+                <li>
+                    Process the information. The values collected is in list.
+                    We normally will run a for loop through the list to process necessary values.
+                    Here are the sample one.
+                </li>
             </ol>
+            <h3>Sample code</h3>
+                Download <a href="data/ecp_poll.py">sample code</a> with full documentation
             <h3>Contact</h3>
             <ul>
                 <li>If you have any question about the above process,
