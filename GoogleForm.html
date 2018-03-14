@@ -44,8 +44,10 @@
 
                 <li>Write a script to process the data collected.</li>
             </ol>
+
+            <h3>Writing script tutorial</h3>
+            There are 3 necessary parts on the script.
             <ol>
-                There are 3 necessary parts on the script.
                 <li>
                     Get credentials from Google by open <em>.json file</em>
                     <xmp>
@@ -65,7 +67,7 @@
                     <xmp>
                         gc = get_google_client()
                         doc = gc.open_by_key({{ fill in the Google Sheet ID }})
-                        sheet = doc.worksheet({{ fill in the Google Sheet Tab }})
+                        sheet = doc.worksheet({{ fill in the Google Sheet Tab Name }})
                         row_count = sheet.row_count
                         for row in range(2, row_count + 1):
                             values = sheet.row_values(row)
@@ -77,11 +79,10 @@
                 <li>
                     Process the information. The values collected is in list.
                     We normally will run a for loop through the list to process necessary values.
-                    Here are the sample one.
                 </li>
             </ol>
             <h3>Sample code</h3>
-                Download <a href="data/ecp_poll.py">sample code</a> with full documentation
+                Download <a href="data/ecp_poll.py">sample code</a> with full documentation.
             <h3>Contact</h3>
             <ul>
                 <li>If you have any question about the above process,
