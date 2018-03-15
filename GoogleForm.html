@@ -64,15 +64,24 @@
                 </li>
                 <li>
                     Get the information from Google Form and process it
-<pre><span></span><span class="n">gc</span> <span class="o">=</span> <span class="n">get_google_client</span><span class="p">()</span>
-<span class="n">doc</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open_by_key</span><span class="p">({{</span> <span class="n">fill</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Google</span> <span class="n">Sheet</span> <span class="n">ID</span> <span class="p">}})</span>
-<span class="n">sheet</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">worksheet</span><span class="p">({{</span> <span class="n">fill</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Google</span> <span class="n">Sheet</span> <span class="n">Tab</span> <span class="n">Name</span> <span class="p">}})</span>
-<span class="n">row_count</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">row_count</span>
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">row_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<pre><span></span> <span class="n">gc</span> <span class="o">=</span> <span class="n">get_google_client</span><span class="p">()</span>
+
+ <span class="c1"># Open Google Sheet file: replace Sheet ID with actual ID of the Sheet</span>
+ <span class="n">doc</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open_by_key</span><span class="p">(</span><span class="s1">'Sheet ID'</span><span class="p">)</span>
+
+ <span class="c1"># Read Google Sheet tab: replace Tab name with actual name of the tab on the Sheet</span>
+ <span class="n">sheet</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">worksheet</span><span class="p">(</span><span class="s2">"Tab name"</span><span class="p">)</span>
+
+ <span class="n">row_count</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">row_count</span>
+ <span class="c1"># run through all rows of the Google Sheet</span>
+ <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">row_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
     <span class="n">values</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">row_values</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="c1"># Blank row</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
         <span class="k">break</span>
-    <span class="n">process_value</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+
+     <span class="c1"># process the values collected from Google Sheet</span>
+     <span class="n">process_value</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
 </pre>
                 </li>
                 <li>
