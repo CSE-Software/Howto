@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment.css">
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -50,33 +51,29 @@
             <ol>
                 <li>
                     Get credentials from Google by open <em>.json file</em>
-                    <pre>
-                    <code>
-with open('google_key.json') as f:
-    config = json.load(f)
+<pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'google_key.json'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 
-creds = SignedJwtAssertionCredentials(
-    config['client_email'],
-    config['private_key'],
-    ['https://spreadsheets.google.com/feeds']
-)
-return gspread.authorize(creds)
-                    </code></pre>
+<span class="n">creds</span> <span class="o">=</span> <span class="n">SignedJwtAssertionCredentials</span><span class="p">(</span>
+    <span class="n">config</span><span class="p">[</span><span class="s1">'client_email'</span><span class="p">],</span>
+    <span class="n">config</span><span class="p">[</span><span class="s1">'private_key'</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">'https://spreadsheets.google.com/feeds'</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="k">return</span> <span class="n">gspread</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">creds</span><span class="p">)</span>
+</pre>
                 </li>
                 <li>
                     Get the information from Google Form and process it
-                    <pre>
-                    <code>
-gc = get_google_client()
-doc = gc.open_by_key({{ fill in the Google Sheet ID }})
-sheet = doc.worksheet({{ fill in the Google Sheet Tab Name }})
-row_count = sheet.row_count
-for row in range(2, row_count + 1):
-    values = sheet.row_values(row)
-    if not values[0]:
-        break
-    process_value(values)
-                    </code></pre>
+<pre><span></span><span class="n">gc</span> <span class="o">=</span> <span class="n">get_google_client</span><span class="p">()</span>
+<span class="n">doc</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open_by_key</span><span class="p">({{</span> <span class="n">fill</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Google</span> <span class="n">Sheet</span> <span class="n">ID</span> <span class="p">}})</span>
+<span class="n">sheet</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">worksheet</span><span class="p">({{</span> <span class="n">fill</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Google</span> <span class="n">Sheet</span> <span class="n">Tab</span> <span class="n">Name</span> <span class="p">}})</span>
+<span class="n">row_count</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">row_count</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">row_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">row_values</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="k">break</span>
+    <span class="n">process_value</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+</pre>
                 </li>
                 <li>
                     Process the information. The values collected is in list.
