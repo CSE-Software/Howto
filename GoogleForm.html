@@ -25,32 +25,50 @@
         <a href="https://github.com/CSE-Software/Howto" class="button"><small>View project on</small> GitHub</a>
     </div>
 </header>
-
-<div id="content-wrapper">
-    <div class="inner clearfix" align="justify">
-        <section id="main-content">
-            Idea: Using Google API Console to collect information from Google Form
-            <h3>Steps:</h3>
-            <ol>
-                <li>
-                    Using <a href="https://console.developers.google.com/apis">Google API Console</a>
-                    to generate <em>.json file</em> with private key and ID
-                </li>
-                <li>
-                    Research on <a href="https://github.com/burnash/gspread">Google Spreadsheets Python API</a>
-                </li>
-                <li>Open the <em>.json file</em> to see all the necessary information.
-                    Share Google spread sheet with client email in the <em>.json file</em>.
-                </li>
-
-                <li>Write a script to process the data collected.</li>
-            </ol>
-
-            <h3>Writing script tutorial</h3>
-            There are 3 necessary parts on the script.
-            <ol>
-                <li>
-                    Get credentials from Google by open <em>.json file</em>
+    <div id="content-wrapper">
+        <div class="inner clearfix" align="justify">
+            <section id="main-content">
+                Idea: Using Google API Console to collect information from Google Form
+                <h3>Step 1: Create a Google Service Account</h3>
+                <ol>
+                    <li>
+                        Go to <a href="https://console.developers.google.com/apis">Google API Console</a>
+                        and create a new project.
+                        Use this <a href="https://cloud.google.com/resource-manager/docs/creating-managing-projects">link</a>
+                        for more details.
+                    </li>
+                    <li>
+                        Under the new project, create a new service account key with type <em>JSON</em>.
+                        Use this <a href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys">link</a>
+                        for more details.
+                    </li>
+                    <li>
+                        Save this JSON key with name <em>google_key.json</em>,
+                        which will be used later for the automation script.
+                    </li>
+                </ol>
+                <h3>Step 2: Connect to Google Form</h3>
+                <ol>
+                    <li>Create a Google Form and choose the response output.</li>
+                    <li>Go to the output Google Sheet and share it with the service account email,
+                        which can be found in the <em>google_key.json</em> with the key <em>client_email</em>
+                        Use this <a href="https://support.google.com/drive/answer/2494822">
+                            link</a> for more details.
+                    </li>
+                </ol>
+                <h3>Step 3: Install requirements</h3>
+                <ol>
+                    <li>We will use Python 2.7 for our script. If you don't have it, please install as
+                        <a href="https://www.python.org/downloads/">following</a></li>
+                    <li>We also need <em>pip</em> for package management. If you don't have it, please install as
+                        <a href="https://pip.pypa.io/en/stable/installing">following</a></li>
+                    <li>Use pip to install two required packages: <em>oauth2client==1.5.2</em> and <em>gspread==0.6.2</em></li>
+                </ol>
+                <h3>Step 4: Writing script </h3>
+                There are 3 main parts on the script.
+                <ol>
+                    <li>
+                        Read credentials from the <em>google_key.json</em> created in step 1.
 <pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'google_key.json'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 
@@ -61,9 +79,9 @@
 <span class="p">)</span>
 <span class="k">return</span> <span class="n">gspread</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">creds</span><span class="p">)</span>
 </pre>
-                </li>
-                <li>
-                    Get the information from Google Form and process it
+                    </li>
+                    <li>
+                        Read the responses row-by-row and process it.
 <pre><span></span> <span class="n">gc</span> <span class="o">=</span> <span class="n">get_google_client</span><span class="p">()</span>
 
  <span class="c1"># Open Google Sheet file: replace Sheet ID with actual ID of the Sheet</span>
@@ -83,38 +101,38 @@
      <span class="c1"># process the values collected from Google Sheet</span>
      <span class="n">process_value</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
 </pre>
-                </li>
-                <li>
-                    Process the information. The values collected is in list.
-                    We normally will run a for loop through the list to process necessary values.
-                </li>
-            </ol>
-            <h3>Sample code</h3>
+                    </li>
+                    <li>
+                        Depending on your application, you may process the data accordingly.
+                        In our case, we create group responses by projects and write it to the markdown file.
+                    </li>
+                </ol>
+                <h3>Sample code</h3>
                 Download <a href="data/ecp_poll.py">sample code</a> with full documentation.
-            <h3>Contact</h3>
-            <ul>
-                <li>If you have any question about the above process,
-                    contact <a href="mailto:dhdo@csbsju">Duong Do</a> for explanation.</li>
-                <li>We also welcome for any recommendation for our project.
-                    Contact at the <a href="mailto:dhdo@csbsju">same address</a></li>
-            </ul>
-            <h4><a href="index.html">Back to homepage</a></h4>
-        </section>
+                <h3>Contact</h3>
+                <ul>
+                    <li>If you have any question about the above process,
+                        contact <a href="mailto:dhdo@csbsju">Duong Do</a> for explanation.</li>
+                    <li>We also welcome for any recommendation for our project.
+                        Contact at the <a href="mailto:dhdo@csbsju">same address</a></li>
+                </ul>
+                <h4><a href="index.html">Back to homepage</a></h4>
+            </section>
 
-        <aside id="sidebar">
-            <a href="https://github.com/CSE-Software/Howto/zipball/master" class="button">
-                <small>Download</small>
-                .zip file
-            </a>
-            <a href="https://github.com/CSE-Software/Howto/tarball/master" class="button">
-                <small>Download</small>
-                .tar.gz file
-            </a>
+            <aside id="sidebar">
+                <a href="https://github.com/CSE-Software/Howto/zipball/master" class="button">
+                    <small>Download</small>
+                    .zip file
+                </a>
+                <a href="https://github.com/CSE-Software/Howto/tarball/master" class="button">
+                    <small>Download</small>
+                    .tar.gz file
+                </a>
 
-            <p class="repo-owner"><a href="https://github.com/Collegeville/Lex"></a> is maintained by <a href="https://github.com/Collegeville">Collegeville</a>.</p>
+<p class="repo-owner"><a href="https://github.com/Collegeville/Lex"></a> is maintained by <a href="https://github.com/Collegeville">Collegeville</a>.</p>
 
-        </aside>
-    </div>
+</aside>
+</div>
 </div>
 
 
